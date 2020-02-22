@@ -15,7 +15,6 @@ public class Rogue extends Character {
     @Override
     public String basicAttackDamage(Character rival) {
         return (getPlayersName() + " utilise Tir à l'Arc et inflige " + this.agility + " dommage(s)!");
-        //"Le joueur " + rival.playersNumber + " perd " + this.agility + " points de vie.\nIl lui reste " + rival.life + " points de vie.\n");
     }
 
     @Override
