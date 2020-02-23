@@ -187,7 +187,7 @@ public class CharactersActivity extends AppCompatActivity implements View.OnClic
         popUp.setPositiveButton(getString(R.string.next), new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                Intent intent = new Intent(getApplicationContext(), SecondCharacterSelectionActivity.class);
+                Intent intent = new Intent(getApplicationContext(), SecondCharactersActivity.class);
                 startActivity(intent);
             }
         });
