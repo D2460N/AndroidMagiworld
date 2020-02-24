@@ -1,5 +1,6 @@
 package com.example.android_magiworld;
 
+
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -14,7 +15,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-
+import com.example.android_magiworld.Ressources.Mage;
+import com.example.android_magiworld.Ressources.Rogue;
+import com.example.android_magiworld.Ressources.Warrior;
 import com.example.android_magiworld.Ressources.Character;
 
 import java.util.ArrayList;
@@ -37,7 +40,7 @@ public class SecondCharactersActivity extends AppCompatActivity implements View.
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(layout.characterchoice);
+        setContentView(R.layout.characterchoice);
 
         vLevel = findViewById(id.level);
         vLife = findViewById(id.life);
@@ -58,7 +61,7 @@ public class SecondCharactersActivity extends AppCompatActivity implements View.
         rogue.setOnClickListener(this);
         mage.setOnClickListener(this);
 
-        playersTurn.setText(getString(string.player_creation, 2));
+        playersTurn.setText(getString(string.characterchoice, 2));
 
         popUp = new AlertDialog.Builder(this, R.style.MyDialogTheme);
 
@@ -189,7 +192,7 @@ public class SecondCharactersActivity extends AppCompatActivity implements View.
         popUp.setPositiveButton(getString(string.next), new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                Intent intent = new Intent(getApplicationContext(), BeginGameFragment.class);
+                Intent intent = new Intent(getApplicationContext(), BeginGame.class);
                 startActivity(intent);
             }
         });
