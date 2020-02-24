@@ -54,8 +54,8 @@ public class SecondCharactersActivity extends AppCompatActivity implements View.
         nextBtn.setOnClickListener(this);
 
         warrior = findViewById(id.warrior);
-        rogue = findViewById(id.ranger);
-        mage = findViewById(id.sorcerer);
+        rogue = findViewById(id.rogue);
+        mage = findViewById(id.mage);
 
         warrior.setOnClickListener(this);
         rogue.setOnClickListener(this);
