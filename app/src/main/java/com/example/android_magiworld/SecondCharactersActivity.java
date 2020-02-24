@@ -1,6 +1,5 @@
 package com.example.android_magiworld;
 
-
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -61,7 +60,7 @@ public class SecondCharactersActivity extends AppCompatActivity implements View.
         rogue.setOnClickListener(this);
         mage.setOnClickListener(this);
 
-        playersTurn.setText(getString(string.characterchoice, 2));
+        playersTurn.setText(getString(R.string.characterchoice, 2));
 
         popUp = new AlertDialog.Builder(this, R.style.MyDialogTheme);
 

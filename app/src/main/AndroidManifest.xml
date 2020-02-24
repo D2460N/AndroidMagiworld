@@ -19,6 +19,7 @@
         <activity android:name=".SecondCharactersActivity" />
         <activity android:name=".CharactersActivity" />
         <activity android:name=".Begingame" />
+        <activity android:name=".RecyclerViewAdapter" />
     </application>
 
 </manifest>
