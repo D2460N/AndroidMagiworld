@@ -41,7 +41,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:src="@drawable/ic_warrior"
+                android:src="@drawable/"
                 android:contentDescription="@string/guerrier">
             </ImageView>
 
@@ -50,7 +50,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:src="@drawable/ic_rogue"
+                android:src="@drawable/"
                 android:contentDescription="@string/rodeur">
             </ImageView>
 
@@ -59,7 +59,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:src="@drawable/ic_mage"
+                android:src="@drawable/"
                 android:contentDescription="@string/mage">
             </ImageView>
 

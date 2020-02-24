@@ -12,14 +12,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.android_magiworld.Ressources.Character;
+
 import java.util.ArrayList;
 import java.util.List;
 
-import com.example.android_magiworld.Ressources.Character;
 
 
-
-public class BeginGame extends AppCompatActivity implements View.OnClickListener {
+public class Begingame extends AppCompatActivity implements View.OnClickListener {
     private List<Character> player = SecondCharactersActivity.getPlayers();
     private Character player1 = player.get(0);
     private Character player2 = player.get(1);
