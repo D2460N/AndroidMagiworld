@@ -17,6 +17,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.android_magiworld.Ressources.Mage;
 import com.example.android_magiworld.Ressources.Rogue;
 import com.example.android_magiworld.Ressources.Warrior;
+import com.example.android_magiworld.Ressources.Character;
 
 public class CharactersActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -102,13 +103,13 @@ public class CharactersActivity extends AppCompatActivity implements View.OnClic
             rogue.setBackgroundColor(0x0);
             mage.setBackgroundColor(0x0);
         }
-        if (v.getId() == R.id.ranger) {
+        if (v.getId() == R.id.rogue) {
             character = "ranger";
             rogue.setBackgroundColor(getResources().getColor(R.color.lightWhite));
             warrior.setBackgroundColor(0x0);
             mage.setBackgroundColor(0x0);
         }
-        if (v.getId() == R.id.sorcerer) {
+        if (v.getId() == R.id.mage) {
             character = "sorcerer";
             mage.setBackgroundColor(getResources().getColor(R.color.lightWhite));
             rogue.setBackgroundColor(0x0);

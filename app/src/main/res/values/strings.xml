@@ -20,7 +20,7 @@
     <string name="back_home">PAGE D\'ACCUEIL</string>
     <string name="attaque">ATTAQUE !</string>
     <string name="suivant">SUIVANT</string>
-    <string name="player_creation">"JOUEUR %d\nCréez votre personnage !"</string>
+    <string name="characterchoice">"JOUEUR %d\nCréez votre personnage !"</string>
     <string name="introduction">"Introduction du joueur %d"</string>
 
     <string name="surname">PSEUDO :</string>

@@ -28,7 +28,7 @@ public abstract class Character {
     public abstract String basicAttackDamage(Character rival);
     public abstract void specialAttack(Character rival);
     public abstract String specialAttackDamage(Character rival);
-
+    public abstract String introduction();
 
     public int setLifeAtZero() { return this.life = 0;}
 }

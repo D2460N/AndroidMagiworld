@@ -46,7 +46,7 @@
             </ImageView>
 
             <ImageView
-                android:id="@+id/ranger"
+                android:id="@+id/rogue"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -55,7 +55,7 @@
             </ImageView>
 
             <ImageView
-                android:id="@+id/sorcerer"
+                android:id="@+id/mage"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
