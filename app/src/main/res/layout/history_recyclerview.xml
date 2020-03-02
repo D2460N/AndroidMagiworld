@@ -7,13 +7,13 @@
     app:cardCornerRadius="3dp"
     app:cardElevation="3dp"
     android:layout_marginTop="10dp"
-    app:cardBackgroundColor="#074f5c">
+    app:cardBackgroundColor="#000000">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:background="@drawable/ic_magiworld">
+        android:background="@drawable/ic_fond3">
 
         <TextView
             android:id="@+id/number_of_turn"
@@ -24,13 +24,14 @@
             android:gravity="center"
             android:textColor="@android:color/white"
             android:background="@drawable/ic_magiworld"/>
+
         <TextView
             android:id="@+id/attack_history"
-            android:padding="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:padding="10dp"
             android:text="Le joueur 1 attaque le joueur 2 ! "
-            android:textColor="@android:color/white"/>
+            android:textColor="@android:color/white" />
     </LinearLayout>
 
 </androidx.cardview.widget.CardView>
