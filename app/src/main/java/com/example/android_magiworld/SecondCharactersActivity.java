@@ -157,13 +157,13 @@ public class SecondCharactersActivity extends AppCompatActivity implements View.
         } else {
             switch (character) {
                 case "warrior":
-                    player2 = new Warrior(level, strength, intelligence, agility, playersName);
+                    player2 = new Warrior(level, strength, agility, intelligence, playersName);
                     break;
                 case "rogue":
-                    player2 = new Rogue(level, strength, intelligence, agility, playersName);
+                    player2 = new Rogue(level, strength, agility, intelligence, playersName);
                     break;
                 case "mage":
-                    player2 = new Mage(level, strength, intelligence, agility, playersName);
+                    player2 = new Mage(level, strength, agility, intelligence, playersName);
             }
         }
         return true;

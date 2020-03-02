@@ -144,8 +144,8 @@ public class CharactersActivity extends AppCompatActivity implements View.OnClic
         }
 
         strength = Integer.parseInt(vStrength.getText().toString());
-        intelligence = Integer.parseInt(vIntelligence.getText().toString());
         agility = Integer.parseInt(vAgility.getText().toString());
+        intelligence = Integer.parseInt(vIntelligence.getText().toString());
         playersName = vPlayersName.getText().toString().trim();
 
         if ((strength + intelligence + agility) != level || level == 0) {
@@ -154,13 +154,13 @@ public class CharactersActivity extends AppCompatActivity implements View.OnClic
         } else {
             switch (character) {
                 case "warrior":
-                    player1 = new Warrior(level, strength, intelligence, agility, playersName);
+                    player1 = new Warrior(level, strength, agility, intelligence, playersName);
                     break;
                 case "rogue":
-                    player1 = new Rogue(level, strength, intelligence, agility, playersName);
+                    player1 = new Rogue(level, strength, agility, intelligence, playersName);
                     break;
                 case "mage":
-                    player1 = new Mage(level, strength, intelligence, agility, playersName);
+                    player1 = new Mage(level, strength, agility, intelligence, playersName);
             }
         }
         return true;

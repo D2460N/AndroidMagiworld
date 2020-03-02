@@ -202,15 +202,16 @@
 
         </TextView>
 
-        <EditText
-            android:id="@+id/agility"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:hint="@string/hint_numbers"
-            android:importantForAutofill="no"
-            android:inputType="number"
-            android:textColorHint="@color/lightWhite"
-            android:textColor="@android:color/white"
+
+       <EditText
+        android:id="@+id/agility"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_numbers"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:textColorHint="@color/lightWhite"
+        android:textColor="@android:color/white"
             app:layout_constraintBaseline_toBaselineOf="@+id/agility_title"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.02"
@@ -231,15 +232,15 @@
 
         </TextView>
 
-        <EditText
-            android:id="@+id/intelligence"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:hint="@string/hint_numbers"
-            android:importantForAutofill="no"
-            android:inputType="number"
-            android:textColorHint="@color/lightWhite"
-            android:textColor="@android:color/white"
+    <EditText
+        android:id="@+id/intelligence"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_numbers"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:textColorHint="@color/lightWhite"
+        android:textColor="@android:color/white"
             app:layout_constraintBaseline_toBaselineOf="@+id/intelligence_title"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.02"
