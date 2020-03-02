@@ -41,20 +41,20 @@ public class SecondCharactersActivity extends AppCompatActivity implements View.
         super.onCreate(savedInstanceState);
         setContentView(R.layout.characterchoice);
 
-        vLevel = findViewById(id.level);
-        vLife = findViewById(id.life);
-        vStrength = findViewById(id.strength);
-        vAgility = findViewById(id.agility);
-        vIntelligence = findViewById(id.intelligence);
-        vPlayersName = findViewById(id.name);
+        vLevel = findViewById(R.id.level);
+        vLife = findViewById(R.id.life);
+        vStrength = findViewById(R.id.strength);
+        vAgility = findViewById(R.id.agility);
+        vIntelligence = findViewById(R.id.intelligence);
+        vPlayersName = findViewById(R.id.name);
 
-        playersTurn = findViewById(id.players_turn);
-        nextBtn = findViewById(id.next_and_start);
+        playersTurn = findViewById(R.id.players_turn);
+        nextBtn = findViewById(R.id.next_and_start);
         nextBtn.setOnClickListener(this);
 
-        warrior = findViewById(id.warrior);
-        rogue = findViewById(id.rogue);
-        mage = findViewById(id.mage);
+        warrior = findViewById(R.id.warrior);
+        rogue = findViewById(R.id.rogue);
+        mage = findViewById(R.id.mage);
 
         warrior.setOnClickListener(this);
         rogue.setOnClickListener(this);
@@ -77,42 +77,42 @@ public class SecondCharactersActivity extends AppCompatActivity implements View.
                     level = Integer.parseInt(vLevel.getText().toString());
 
                 life = level * 5;
-                vLife.setText(getString(string.life_display, life));
+                vLife.setText(getString(R.string.life_display, life));
             }
 
             @Override
             public void afterTextChanged(Editable s) {
                 if (level > 100) {
-                    vLevel.setError(getString(string.inferiorto100));
+                    vLevel.setError(getString(R.string.inferiorto100));
                 }
 
                 if (vLevel.getText().toString().equals("0"))
-                    vLevel.setError(getString(string.superiorto0));
+                    vLevel.setError(getString(R.string.superiorto0));
             }
         });
     }
 
     @Override
     public void onClick(View v) {
-        if (v.getId() == id.next_and_start)
+        if (v.getId() == R.id.next_and_start)
             if (checkIfValid()) {
                 introduction();
             }
-        if (v.getId() == id.warrior) {
+        if (v.getId() == R.id.warrior) {
             character = "warrior";
-            warrior.setBackgroundColor(getResources().getColor(color.lightWhite));
+            warrior.setBackgroundColor(getResources().getColor(R.color.lightWhite));
             rogue.setBackgroundColor(0x0);
             mage.setBackgroundColor(0x0);
         }
-        if (v.getId() == id.rogue) {
+        if (v.getId() == R.id.rogue) {
             character = "rogue";
-            rogue.setBackgroundColor(getResources().getColor(color.lightWhite));
+            rogue.setBackgroundColor(getResources().getColor(R.color.lightWhite));
             warrior.setBackgroundColor(0x0);
             mage.setBackgroundColor(0x0);
         }
-        if (v.getId() == id.mage) {
+        if (v.getId() == R.id.mage) {
             character = "mage";
-            mage.setBackgroundColor(getResources().getColor(color.lightWhite));
+            mage.setBackgroundColor(getResources().getColor(R.color.lightWhite));
             rogue.setBackgroundColor(0x0);
             warrior.setBackgroundColor(0x0);
         }
@@ -159,10 +159,10 @@ public class SecondCharactersActivity extends AppCompatActivity implements View.
                 case "warrior":
                     player2 = new Warrior(level, strength, intelligence, agility, playersName);
                     break;
-                case "ranger":
+                case "rogue":
                     player2 = new Rogue(level, strength, intelligence, agility, playersName);
                     break;
-                case "sorcerer":
+                case "mage":
                     player2 = new Mage(level, strength, intelligence, agility, playersName);
             }
         }
@@ -171,11 +171,11 @@ public class SecondCharactersActivity extends AppCompatActivity implements View.
 
 
     private void popUp() {
-        popUp.setTitle(getString(string.aie));
+        popUp.setTitle(getString(R.string.aie));
         if (level == 0)
-            popUp.setMessage(getString(string.superiorto0));
-        popUp.setMessage(getString(string.totalunderlevel));
-        popUp.setPositiveButton(getString(string.back), new DialogInterface.OnClickListener() {
+            popUp.setMessage(getString(R.string.superiorto0));
+        popUp.setMessage(getString(R.string.totalunderlevel));
+        popUp.setPositiveButton(getString(R.string.back), new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 dialog.dismiss();
@@ -186,12 +186,12 @@ public class SecondCharactersActivity extends AppCompatActivity implements View.
 
     private void introduction() {
         final AlertDialog.Builder popUp = new AlertDialog.Builder(this, R.style.MyDialogTheme);
-        popUp.setTitle(getString(string.introduction, 2));
+        popUp.setTitle(getString(R.string.introduction, 2));
         popUp.setMessage(player2.introduction());
-        popUp.setPositiveButton(getString(string.next), new DialogInterface.OnClickListener() {
+        popUp.setPositiveButton(getString(R.string.next), new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                Intent intent = new Intent(getApplicationContext(), BeginGame.class);
+                Intent intent = new Intent(getApplicationContext(), Begingame.class);
                 startActivity(intent);
             }
         });

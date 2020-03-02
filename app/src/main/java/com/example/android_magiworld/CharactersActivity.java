@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -93,8 +94,6 @@ public class CharactersActivity extends AppCompatActivity implements View.OnClic
         if (v.getId() == R.id.next_and_start)
             if (checkIfValid()) {
                 introduction();
-                Intent intent = new Intent(this, SecondCharactersActivity.class);
-                startActivity(intent);
             }
         if (v.getId() == R.id.warrior) {
             character = "warrior";
@@ -104,13 +103,13 @@ public class CharactersActivity extends AppCompatActivity implements View.OnClic
             mage.setBackgroundColor(0x0);
         }
         if (v.getId() == R.id.rogue) {
-            character = "ranger";
+            character = "rogue";
             rogue.setBackgroundColor(getResources().getColor(R.color.lightWhite));
             warrior.setBackgroundColor(0x0);
             mage.setBackgroundColor(0x0);
         }
         if (v.getId() == R.id.mage) {
-            character = "sorcerer";
+            character = "mage";
             mage.setBackgroundColor(getResources().getColor(R.color.lightWhite));
             rogue.setBackgroundColor(0x0);
             warrior.setBackgroundColor(0x0);
@@ -157,10 +156,10 @@ public class CharactersActivity extends AppCompatActivity implements View.OnClic
                 case "warrior":
                     player1 = new Warrior(level, strength, intelligence, agility, playersName);
                     break;
-                case "ranger":
+                case "rogue":
                     player1 = new Rogue(level, strength, intelligence, agility, playersName);
                     break;
-                case "sorcerer":
+                case "mage":
                     player1 = new Mage(level, strength, intelligence, agility, playersName);
             }
         }
@@ -182,14 +181,16 @@ public class CharactersActivity extends AppCompatActivity implements View.OnClic
     }
 
     private void introduction() {
+        Log.e("introduction","ok"+player1);
         final AlertDialog.Builder popUp = new AlertDialog.Builder(this, R.style.MyDialogTheme);
         popUp.setTitle(getString(R.string.introduction, 1));
         popUp.setMessage(player1.introduction());
         popUp.setPositiveButton(getString(R.string.next), new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
+                Log.e("introduction","boitededialogue");
                 Intent intent = new Intent(getApplicationContext(), SecondCharactersActivity.class);
-                startActivity(intent);
+               startActivity(intent);
             }
         });
         popUp.show();
